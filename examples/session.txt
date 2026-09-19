@@ -1,0 +1,13 @@
+redis-cli -p 6380
+127.0.0.1:6380> PING
+PONG
+127.0.0.1:6380> SET counter 10
+OK
+127.0.0.1:6380> INCR counter
+(integer) 11
+127.0.0.1:6380> LPUSH queue one two three
+(integer) 3
+127.0.0.1:6380> LRANGE queue 0 -1
+1) "three"
+2) "two"
+3) "one"
